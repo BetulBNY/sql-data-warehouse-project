@@ -19,26 +19,26 @@ HAVING COUNT(*) > 1 OR cst_id is Null;
 SELECT cst_firstname
 FROM bronze.crm_cust_info;
 
--- cst_firstname : List of all names which have spaces
+-- cst_firstname : List all names that contain unwanted spaces
 SELECT cst_firstname
 FROM bronze.crm_cust_info
 WHERE cst_firstname != TRIM(cst_firstname); -- If the original value is not equal to the same after trimming, it means there are spaces.
 
--- cst_lastname: List of all last names which have spaces
+-- cst_lastname: List all last names that contain unwanted spaces
 SELECT cst_lastname
 FROM bronze.crm_cust_info
 WHERE cst_lastname != TRIM(cst_lastname); 
 
--- cst_gndr:
+-- cst_gndr: Check gender column for unwanted spaces
 SELECT cst_gndr
 FROM bronze.crm_cust_info
 WHERE cst_gndr != TRIM(cst_gndr); 
 
 --------------------------------------------------------------------------------------------------------
 -- 3) DATA STANDARDIZATION & CONSISTENCY CHECK:
--- Check the consistency of values in low cardinality columns (cst_gndr & cst_marital_status )
--- In my data warehouse, I aim 	to store clear and meaningful values rather than using abbreviated terms. 
--- In my data warehouse, I use the default 'n/a' for missing values.
+-- Check the consistency of values in low-cardinality columns (cst_gndr & cst_marital_status)
+-- In my data warehouse, I aim to store clear and meaningful values instead of abbreviations.
+-- I use 'n/a' as the default value for missing data.
 
 SELECT DISTINCT cst_gndr
 FROM bronze.crm_cust_info;
