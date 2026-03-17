@@ -4,7 +4,6 @@ DDL Script: Create Bronze Tables
 -- DDL stands for Data Definition Language.
 -- It is the part of SQL used to define and manage the structure of database objects, not the data itself.
 
-
 -- CRM PART
 -- crm_cust_info
 DROP TABLE IF EXISTS bronze.crm_cust_info;
