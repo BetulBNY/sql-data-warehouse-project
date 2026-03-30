@@ -28,7 +28,7 @@ I chose the **Medallion Architecture** to manage the data lifecycle:
 
 > [!TIP]
 > **Architecture Design**
-> ![Data Architecture Diagram]((docs/data_architecture.png))
+> ![Data Architecture Diagram](docs/data_architecture.png)
 > *High-level overview of the data flow from source to reporting.*
 
 ---
