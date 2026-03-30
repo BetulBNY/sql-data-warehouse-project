@@ -28,7 +28,7 @@ I chose the **Medallion Architecture** to manage the data lifecycle:
 
 > [!TIP]
 > **Architecture Design**
-> ![Data Architecture Diagram](docs\data_architecture.png)
+> ![Data Architecture Diagram]((docs/data_architecture.png))
 > *High-level overview of the data flow from source to reporting.*
 
 ---
@@ -72,7 +72,7 @@ For each of the six source tables (`crm_cust_info`, `erp_loc_a101`, etc.), I fol
 > [!TIP]
 > **Data Integration Map**
 > I created a comprehensive mapping to visualize how these tables connect after the transformation process.
-> ![Data Integration Map](docs\data_integration.png)
+> ![Data Integration Map](docs/data_integration.png)
 
 **Automation:**
 Once I perfected the transformation logic for all tables, I consolidated the entire workflow into a single **Stored Procedure**. This ensures the Silver layer can be refreshed with one command while maintaining all the quality checks mentioned above.
@@ -99,7 +99,7 @@ For the final layer, I implemented a **Star Schema** to optimize query performan
 ## 7. Data Modeling & Catalog
 The final structure is visualized below:
 
-![Data Model Diagram](docs\data_model.png)
+![Data Model Diagram](docs/data_model.png)
 
 To ensure the warehouse remains maintainable, I created a **Data Catalog**. It serves as the "Source of Truth" for column definitions and data types.
 *   [View Data Catalog](docs/data_catalog.md)
